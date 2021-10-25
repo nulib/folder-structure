@@ -1,0 +1,45 @@
+HDD_ID 
+
+  |_____  Audio 
+
+                 |_____  project_identifier_PrimaryID_v01 
+
+                                 |_____  a 
+
+                                 |             |_____  project_identifier _primaryID_v01s01_a.wav 
+
+                                 |             |_____  project_identifier _primaryID_v01s01_a.md5 
+
+                                 |             |_____  project_identifier _primaryID_v01s02_a.wav 
+
+                                 |             |_____  project_identifier _primaryID_v01s02_a.md5 
+
+                                 |_____  image
+
+                                 |             |_____  project_identifier _primaryID_v01.jpg 
+
+                                 |_____  meta
+
+                                 |             |_____  project_identifier _primaryID_v01.xml 
+
+                                 |_____  p
+
+                                                |_____  project_identifier _primaryID_v01s01_p.wav 
+
+                                                |_____  project_identifier _primaryID_v01s01_p.md5 
+
+                                                |_____  project_identifier _primaryID_v01s02_p.wav 
+
+                                                |_____  project_identifier _primaryID_v01s02_p.md5
+
+
+
+Some additional notes:
+
+-Folder names should be all lowercase
+
+-The parent folder for all items of a specific format should correspond to the format (i.e. “Audio” for audio works, “Video” for video works, and “Film” for film works)
+
+-The name of the metadata folder can be shortened to “meta” (this is a change from what we had previously requested in our vendor specifications)
+
+-MD5 files should always be placed in the same folder as their associated files with one MD5 file per file, with the exception of DPX sequences, which should have one MD5 file for the entire sequence. The contents of the MD5 file should be standard binary mode formatting with relative file paths (checksum [single space] * filename.file): 498cdaf0e7634f94572bbd2c2ec6fdb1 *my_file_p.mov
