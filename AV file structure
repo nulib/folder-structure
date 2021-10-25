@@ -1,3 +1,6 @@
+AV FILE STRUCTURE (SEE BELOW FOR IMAGE)
+
+
 HDD_ID 
 
   |_____  Audio 
@@ -43,3 +46,45 @@ Some additional notes:
 -The name of the metadata folder can be shortened to “meta” (this is a change from what we had previously requested in our vendor specifications)
 
 -MD5 files should always be placed in the same folder as their associated files with one MD5 file per file, with the exception of DPX sequences, which should have one MD5 file for the entire sequence. The contents of the MD5 file should be standard binary mode formatting with relative file paths (checksum [single space] * filename.file): 498cdaf0e7634f94572bbd2c2ec6fdb1 *my_file_p.mov
+
+
+
+IMAGE FILE STRUCTURE
+ 
+HDD_ID 
+  |_____  Project_Name_IDNumber
+                 |_____  targets 
+                                 |_____  Box_01
+                                	          |_____  Target-Box1_start.tif
+    	                                      |_____  Target-Box1_end.tif
+                                 |_____  Box_02
+ 		    	                                  |_____  Target-Box2_start.tif
+                                    	      |_____  Target-Box2_end.tif
+                	
+                  |_____  jpegs
+ 		                              |_____  Box_01
+                                 	          |_____  project_identifier _primaryID_v01s01_verso.jpg
+                                            |_____  project_identifier _primaryID_v01s01_recto.jpg
+                                            |_____  project_identifier _primaryID_v01s02_verso.jpg
+                                  |_____  Box_02
+                                            |_____  project_identifier _primaryID_v01s01_verso.jpg
+                                            |_____  project_identifier _primaryID_v01s01_recto.jpg
+                                            |_____  project_identifier _primaryID_v01s02_verso.jpg
+ 
+                   |_____  tiffs
+                                  |_____  Box_01
+                                 	          |_____  project_identifier _primaryID_v01s01_verso.tif
+                                            |_____  project_identifier _primaryID_v01s01_recto.tif
+                                            |_____  project_identifier _primaryID_v01s02_verso.tif
+                                  |_____  Box_02
+                                            |_____  project_identifier _primaryID_v01s01_verso.tif
+                                            |_____  project_identifier _primaryID_v01s01_recto.tif
+                                            |_____  project_identifier _primaryID_v01s02_verso.tif
+                   |_____  checksums
+                                  |_____  Box_01
+                                            |_____  project_identifier _primaryID_v01s01_recto.sha1 
+                                            |_____  project_identifier _primaryID_v01s01_verso.md5 
+                                          
+                                  |_____  Box_02
+ 			                                      |_____  project_identifier _primaryID_v01s02_recto.sha1
+                                            |_____  project_identifier _primaryID_v01s02_verso.md5
